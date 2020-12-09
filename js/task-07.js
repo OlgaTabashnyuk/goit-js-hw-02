@@ -41,7 +41,7 @@ const addLogin = function (allLogins, login) {
   }
 };
 
-console.log(addLogin(logins, name));
+addLogin(logins, name);
 
 // /*
 //  * Вызовы функции для проверки работоспособности твоей реализации.
