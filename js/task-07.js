@@ -23,28 +23,25 @@ const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 let name = prompt('Введите логин от 4 до 16 символов');
 
 const isLoginValid = function (login) {
-  if (login.length >= 4 && login.length <= 16) {
-    return true;
-  } else {
-    alert('Ошибка! Логин должен быть от 4 до 16 символов');
-  }
+  return login.length >= 4 && login.length <= 16;
 };
 
 const isLoginUnique = function (allLogins, login) {
-  if (allLogins.includes(login)) {
-    alert('Такой логин уже используется!');
-  } else {
-    return true;
-  }
+  return !allLogins.includes(login);
 };
 
 const addLogin = function (allLogins, login) {
-  if (isLoginValid(login) && isLoginUnique(allLogins, login)) {
+  if (!isLoginValid(login)) {
+    return 'Ошибка! Логин должен быть от 4 до 16 символов';
+  } else if (!isLoginUnique(allLogins, login)) {
+    return 'Такой логин уже используется!';
+  } else {
     allLogins.push(login);
-    alert('Логин успешно добавлен!');
+    return 'Логин успешно добавлен!';
   }
 };
-addLogin(logins, name);
+
+console.log(addLogin(logins, name));
 
 // /*
 //  * Вызовы функции для проверки работоспособности твоей реализации.
