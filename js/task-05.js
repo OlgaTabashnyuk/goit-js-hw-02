@@ -3,7 +3,6 @@
 const checkForSpam = function (message) {
   const arrayOfWords = message.toLowerCase();
   console.log(arrayOfWords);
-
   return arrayOfWords.includes('spam') || arrayOfWords.includes('sale');
 };
 /*

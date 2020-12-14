@@ -10,14 +10,11 @@ const formatString = function (string) {
     return `${string}`;
   }
 };
-
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
-
 // // вернется оригинальная строка
-
 console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
 // // вернется форматированная строка
 
