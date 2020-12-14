@@ -25,9 +25,11 @@ let name = prompt('Введите логин от 4 до 16 символов');
 const isLoginValid = function (login) {
   return login.length >= 4 && login.length <= 16;
 };
+
 const isLoginUnique = function (allLogins, login) {
   return !allLogins.includes(login);
 };
+
 const addLogin = function (allLogins, login) {
   if (!isLoginValid(login)) {
     return 'Ошибка! Логин должен быть от 4 до 16 символов';
@@ -38,6 +40,7 @@ const addLogin = function (allLogins, login) {
     return 'Логин успешно добавлен!';
   }
 };
+
 addLogin(logins, name);
 
 // /*
